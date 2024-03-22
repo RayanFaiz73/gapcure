@@ -1,0 +1,25 @@
+.react-select__control {
+    @apply bg-theme-primary-400 rounded-full !important;
+}
+.react-select__input{
+    @apply min-w-0 w-0 !important;
+}
+.react-select__menu{
+    /* @apply bg-theme-primary-400 w-full lg:w-1/2 !important; */
+    @apply bg-theme-primary-400 w-full !important;
+}
+.react-select__option{
+    @apply bg-theme-primary-400 !important;
+}
+.react-select__option--is-focused{
+    @apply bg-theme-primary-500 !important;
+}
+.react-select__multi-value{
+    @apply bg-theme-success-500 px-2 text-gray-300 rounded-full !important;
+}
+.react-select__multi-value__label{
+    @apply text-gray-300 !important;
+}
+.react-select__indicator-separator{
+    @apply bg-theme-primary-400 !important;
+}

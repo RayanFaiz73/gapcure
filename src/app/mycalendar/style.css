@@ -1,0 +1,38 @@
+.fc .fc-popover {
+    z-index: 9;
+}
+.fc-popover {
+    @apply border rounded-b-lg ml-2 mt-2;
+}
+.fc-popover-header{
+  @apply border-b rounded-t-lg;
+
+}
+.fc-popover-title{
+    @apply p-2 font-light text-sm;
+}
+.fc-theme-standard .fc-popover, .fc-theme-standard .fc-popover-header {
+    @apply bg-theme-primary-500;
+}
+.fc-event-main{
+  @apply flex items-baseline;
+}
+.fc-daygrid-dot-event{
+  @apply items-baseline;
+}
+  
+@screen sm {
+    .fc .fc-daygrid-more-link{
+      margin-top:unset;
+      /* border-radius:unset; */
+    }
+}
+
+@media (max-width: 640px) {
+  .fc-daygrid-day-bottom{
+    /* @apply flex justify-center; */
+  }
+    .fc .fc-daygrid-more-link{
+      @apply -mt-5 p-0 ;
+    }
+}

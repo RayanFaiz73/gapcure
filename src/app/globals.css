@@ -18,10 +18,17 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+
+  background: rgb(8,2,74);
+  background: linear-gradient(159deg, rgba(8,2,74,1) 0%, rgba(0,0,0,1) 45%, rgba(0,0,0,1) 100%);
+}
+
+.bg-theme{
+  background:#191633;
 }

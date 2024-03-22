@@ -2,7 +2,9 @@ import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios';
 
 // const BASE_URL = "http://localhost:3001/api";
 // const BASE_URL = "http://localhost:8888/api";
-const BASE_URL = "https://gapcure-server.pearpixels.com/api";
+// const BASE_URL = "https://gapcure-server.pearpixels.com/api";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+// console.log(BASE_URL);
 axios.defaults.headers.post['Accept'] ='application/json';
 axios.defaults.headers.post['Content-Type'] ='application/json';
 

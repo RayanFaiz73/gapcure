@@ -70,7 +70,7 @@ const AppBar = ({ children }: { children: ReactNode }) => {
     
     useEffect(() => {
         if(session){
-            socket.current = io(HOST);
+            socket.current = io(HOST ? HOST : "http://localhost:8888");
             // socket.current.emit("add-user",session.user.id)
             let data = {
                 userId : session.user.id,

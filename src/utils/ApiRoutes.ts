@@ -1,6 +1,7 @@
 // export const HOST = "http://localhost:8888";
-export const HOST = "https://gapcure-server.pearpixels.com";
+// export const HOST = "https://gapcure-server.pearpixels.com";
 
+export const HOST = process.env.NEXT_PUBLIC_BASE_URL;
 // Auth Routes
 export const AUTH_ROUTE = `${HOST}/api/auth`;
 

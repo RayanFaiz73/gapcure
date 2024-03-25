@@ -36,8 +36,8 @@ export default function Index() {
     const [newChat, setNewChat] = useState<Room | null>(null);
     const [newChatUser, setNewChatUser] = useState<number | null>(null)
 
-    const cookieStore = cookies()
-    const refreshToken = cookieStore.get('refreshToken');
+    // const cookieStore = cookies()
+    // const refreshToken = cookieStore.get('refreshToken');
     useEffect(() => {
       if(searchTerm){
         dispatch({
@@ -60,7 +60,7 @@ export default function Index() {
     }, [searchTerm])
     
   useEffect(() => {
-    console.log(cookieStore.getAll())
+    // console.log(cookieStore.getAll())
     if(session?.user){
         setCurrentUser(session.user);
     }

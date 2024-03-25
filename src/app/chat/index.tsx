@@ -16,7 +16,6 @@ import { reducerCases } from '../contexts/constants';
 import { useStateProvider } from '../contexts/StateContext';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
-import { cookies } from 'next/headers';
 
 
 export default function Index() {
@@ -35,9 +34,6 @@ export default function Index() {
     const [isNewChat, setIsNewChat] = useState<boolean>(false)
     const [newChat, setNewChat] = useState<Room | null>(null);
     const [newChatUser, setNewChatUser] = useState<number | null>(null)
-
-    // const cookieStore = cookies()
-    // const refreshToken = cookieStore.get('refreshToken');
     useEffect(() => {
       if(searchTerm){
         dispatch({
@@ -60,7 +56,6 @@ export default function Index() {
     }, [searchTerm])
     
   useEffect(() => {
-    // console.log(cookieStore.getAll())
     if(session?.user){
         setCurrentUser(session.user);
     }

@@ -61,7 +61,12 @@ export default function Index() {
     }
   }, [session]);
   const getAllUsers = async () => {
-    const res = await axiosAuth.get(ALL_USERS);
+    const res = await axiosAuth.get(ALL_USERS, {
+		withCredentials: true,
+		headers: {
+		  'SameSite': 'None'
+		}
+    });
     setContacts(res.data.data);
   };
 

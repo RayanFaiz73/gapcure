@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { io } from "socket.io-client";
 import { useSession } from 'next-auth/react';
 import { Session, User } from 'next-auth/core/types';
-import { axiosAuth } from '@/lib/axiosInstance';
+// import { axiosAuth } from '@/lib/axiosInstance';
 import { Room } from 'next-auth';
 import ChatContainer from '../components/ChatContainer';
 import Rooms from '../components/Rooms';
@@ -16,10 +16,12 @@ import { reducerCases } from '../contexts/constants';
 import { useStateProvider } from '../contexts/StateContext';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
+import useAxiosAuth from '@/lib/hooks/useAxiosAuth';
 
 
 export default function Index() {
 
+    const axiosAuth = useAxiosAuth();
     const { data: session } = useSession();
     const [modalElement, setModalElement]: any = useState();
     // const socket = useRef<any>();
@@ -61,12 +63,7 @@ export default function Index() {
     }
   }, [session]);
   const getAllUsers = async () => {
-    const res = await axiosAuth.get(ALL_USERS, {
-		withCredentials: true,
-		headers: {
-		  'SameSite': 'None'
-		}
-    });
+    const res = await axiosAuth.get(ALL_USERS);
     setContacts(res.data.data);
   };
 
